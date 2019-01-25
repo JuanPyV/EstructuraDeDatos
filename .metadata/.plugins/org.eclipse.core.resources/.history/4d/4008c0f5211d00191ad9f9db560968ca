@@ -1,0 +1,35 @@
+import javax.swing.JOptionPane;
+
+import jdk.nashorn.internal.scripts.JO;
+
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: Arreglo.java
+//Fecha: 19/01/2019
+//Comentarios u observaciones: 
+
+public class Arreglo {
+
+	public static void main(String[] args) {
+		
+		int number, borrar;
+		int n = 10;
+		int[] arreglo = new int[10];
+		
+		for (int i=0; i<n; i++) {
+			number = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero"));
+			arreglo[i] = number;
+		}
+		
+		for (int i=0; i<n; i++) {
+			System.out.print(Integer.toString(arreglo[i]) +" ");
+		}
+		
+		borrar = Integer.parseInt(JOptionPane.showInputDialog("Que posicion quieres borrar?"));
+		if ( arreglo[borrar+1] == 0) {
+			System.out.println("No hay numero en esa posicion");
+		}else {
+			arreglo[borrar+1] = 0;
+			System.out.println("El numero ah sido borrado");
+		}
+	}
+}

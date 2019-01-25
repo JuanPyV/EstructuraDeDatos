@@ -1,0 +1,52 @@
+
+public class Arreglo1 {
+
+	public static void main(String[] args) {
+		Arreglo1 arr = new Arreglo1();
+		arr.insertar(5);
+		arr.borrar(3);
+		arr.toString(arreglo);
+	}
+
+	static int[] arreglo;
+	int size = 0;
+	int i = 0;
+	
+	public Arreglo1() {
+		super();
+		int[] arreglo = new int[10];
+	}
+	
+	public Arreglo1(int n) {
+		super();
+		int[] arreglo = new int[n];
+	}
+	
+	public void insertar(int elem) {
+		if(i >= arreglo.length) {
+			throw new IllegalStateException("No se puede insertar en un arreglo lleno");
+		}else {
+			arreglo[i] = elem;
+			i++;
+			size++;
+		}
+	}
+	
+	public int borrar(int pos) {
+		if(arreglo[i] == 0) {
+			throw new IllegalStateException("Posición invalida para borrar");
+		}else {
+			int val = arreglo[pos];
+			for (int i = pos; i <= arreglo.length; i++) {
+				arreglo[pos] = 0;
+			} 
+			return val;
+		}
+	}
+	
+	public String toString(int[] arreglo) {
+		return arreglo.toString();
+	}
+	
+
+}

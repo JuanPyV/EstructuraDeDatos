@@ -1,0 +1,15 @@
+
+public class BusquedaBinaria {
+	
+	public static int binarySearch(int min, int max, int avg, int valoir, int[] datos) {
+		int min = 0,
+			max = datos.length -1,
+			avg;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,18 @@
+import java.awt.Point;
+
+
+public class SierpinskiGasket {
+	
+	private Point a, b, c;
+	private int nivel;
+	
+	public SierpinskiGasket() {
+		super("Fractal SierpinskiGasket");
+	}
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

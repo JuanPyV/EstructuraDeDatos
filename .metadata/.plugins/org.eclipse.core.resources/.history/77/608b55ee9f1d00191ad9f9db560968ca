@@ -1,0 +1,17 @@
+
+public class nReina {
+	private int[] reinas;
+	
+	public nReina(int n) {
+		this.reinas = new int[n];
+		for( int i = 0; i<this.reinas.length; i++) {
+			this.reinas[i] = -1;
+		}
+	}
+	
+	public boolean valida(int fila, int columna) {
+		for (int i=0; i<fila; i++) {
+			
+		}
+	}
+}

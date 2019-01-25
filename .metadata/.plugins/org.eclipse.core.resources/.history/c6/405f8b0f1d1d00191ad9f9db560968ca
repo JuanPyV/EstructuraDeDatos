@@ -1,0 +1,20 @@
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: ADT
+//Fecha: 19/01/2019
+//Comentarios u observaciones: 
+
+public class Arreglo {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println(Arreglo.arreglin(10));
+
+	}
+	
+	public static long[] arreglin(int n) {
+		long[] num = new long[n];
+		return num;
+	}
+
+}

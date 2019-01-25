@@ -1,0 +1,23 @@
+import javax.swing.JOptionPane;
+
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: ADT
+//Fecha: 19/01/2019
+//Comentarios u observaciones: 
+
+public class Arreglo {
+
+	public static void main(String[] args) {
+		
+		int number;
+		int n = 10;
+		int[] arreglo = new int[10];
+		
+		for (int i=0; i<n; i++) {
+			number = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero"));
+			arreglo[i] = number;
+		}
+		
+		System.out.println(arreglo);
+	}
+}

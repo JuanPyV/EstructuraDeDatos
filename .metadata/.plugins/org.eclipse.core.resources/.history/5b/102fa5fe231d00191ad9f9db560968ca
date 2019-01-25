@@ -1,0 +1,20 @@
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: Arreglo.java
+//Fecha: 19/01/2019
+//Comentarios u observaciones: 
+
+public class recursividad {
+
+	public static void main(String[] args) {
+		System.out.println(Sumatorio(15));
+
+	}
+	
+	private static int Sumatorio(int iNumero){
+		  if (iNumero==0)
+		    return 0;
+		  else
+		    return iNumero + Sumatorio(iNumero-1);
+		}
+
+}

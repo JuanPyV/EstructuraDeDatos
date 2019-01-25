@@ -1,0 +1,30 @@
+
+public class BusquedaBinaria {
+
+	public static int binarySearch(int valor, int[] datos) {
+		int min = 0, max = datos.length - 1, avg;
+		while (min <= max) {
+			avg = (min + max) / 2;
+			if (datos[avg] == valor)
+				return avg;
+			else if (datos[avg] < valor) {
+				min = avg + 1;
+			} else {
+				max = avg - 1;
+			}
+		}
+		return -1;
+	}
+
+	public static void main(String[] args) {
+
+		int[] num = new int[35];
+		for (int i = 0; i < num.length; i++)
+			num[i] = i+i;
+
+		int resultado = BusquedaBinaria.binarySearch(9, num);
+		
+		System.out.println(resultado);
+
+	}
+}
