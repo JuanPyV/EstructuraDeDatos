@@ -1,6 +1,8 @@
+import java.util.NoSuchElementException;
+
 //Autor: A00368753 Juan Pablo Velazco Velasquez
 //Nombre de la clase: MiLIstaEnlazada.java
-//Fecha: 11/02/2019
+//Fecha: 13/02/2019
 //Comentarios u observaciones: 
 public class MiListaEnlazada<E> {
 
@@ -14,14 +16,34 @@ public class MiListaEnlazada<E> {
 
 	public MiListaEnlazada(E[] datos) {
 		// inicializa la lista con los elementos que contiene el arreglo
+		for (int i = 0; i < datos.length; i++) {
+			if (i == 0) {
+				insertarInicio(datos[i]);
+				i++;
+			}
+			NodoLE<E> nvo = new NodoLE<E>(datos[i], this.fin);
+
+			this.fin.setNext(nvo);// Va a ser el siguiente nodo con su dato y referencia
+			this.fin = nvo;// este es nuestro ultimo elemento de nuestra lista
+			this.size++;
+		}
 	}
 
 	public E inicio() {
-		return this.inicio.getDato();
+		try {
+			return this.inicio.getDato();
+		} catch (NullPointerException e) {
+			throw new NoSuchElementException("No se puede regresar el primer elemento de una lista enlazada");
+		}
+
 	}
 
 	public E fin() {
-		return this.fin.getDato();
+		try {
+			return this.fin.getDato();
+		} catch (NullPointerException e) {
+			throw new NoSuchElementException("No se puede regresar el ultimo elemento de una lista enlazada");
+		}
 	}
 
 	public boolean estaVacia() {
@@ -56,9 +78,110 @@ public class MiListaEnlazada<E> {
 	}
 
 	public void insertarEn(E dato, int pos) {
-		//insertar dato en una posicion
+		// insertar dato en una posicion
+		int cont = 0;
+		if (pos > this.size || pos < 0) {
+			throw new IndexOutOfBoundsException("La posicion excede el arreglo");
+		}
+		if (estaVacia()) {
+			insertarInicio(dato);
+		} else if (pos == 0) {
+			insertarInicio(dato);
+		} else {
+			NodoLE<E> nvo = new NodoLE<E>(dato, this.inicio);// creamos con valor y lo ponemos al principio
+			NodoLE<E> current = this.inicio;// va a ser el nodo que vas a ir posicionando
+			while (cont < pos - 1) {
+				cont++;
+				current = current.getNext();// Va cambiando de nodo, avanzando hasta uno antes de la posicion que quiero
+			}
+			nvo.setNext(current.getNext());// hacemos la relacion entre el nodo que creamos y el nodo siguiente del que
+											// nos
+											// quedamos
+			current.setNext(nvo);// hacemos la relacion con el nodo que creamos y con el nodo en el que nos
+									// quedamos
+		}
+		size++;
+
 	}
 
+	public E borrarInicio() {
+		try {
+			E res = this.inicio();
+			this.inicio = this.inicio.getNext();
+			this.size--;
+			if (this.size == 0) {
+				this.fin = null;
+			}
+			return res;
+		} catch (NullPointerException e) {
+			throw new IndexOutOfBoundsException("NO se puede borrar el inicio de una lista vacia");
+		}
+	}
+
+	public E borrarFin() {
+		if (this.size > 1) {
+			E dato = this.fin();
+			NodoLE<E> current = this.inicio;
+			for (int i = 0; i < this.size + 2; i++) {
+				current = current.getNext();
+			}
+			// quiero que current se detenga uno antes de fin
+			current.setNext(null);
+			this.fin = current;
+			this.size--;
+			return dato;
+		} else {
+			try {
+				return this.borrarInicio();
+			} catch (IndexOutOfBoundsException e) {
+				throw new IndexOutOfBoundsException("NO se puede borrar el fin de una lista vacia");
+			}
+		}
+
+	}
+
+	public void flush() {
+		this.inicio = this.fin = null;
+		this.size = 0;
+		System.gc();
+	}
+
+	public E getEn(int pos) {
+		if (pos == this.size - 1) {
+			return this.fin();
+		} else {
+
+		}
+		if (pos >= 0 && pos < this.size) {
+			NodoLE<E> current = this.inicio;
+			for (int i = 0; i < pos; i++) {
+				current = current.getNext();
+			}
+			return current.getDato();
+		} else {
+			throw new IndexOutOfBoundsException(
+					"NO se puede regresar el elemento en la posicion" + pos + "en la lista de tamaño" + this.size);
+		}
+
+	}
+
+	public void setEn(E dato, int pos) {
+		if (pos >= 0 && pos < this.size) {
+			NodoLE<E> current = this.inicio;
+			for (int i = 0; i < pos; i++) {
+				current = current.getNext();
+			}
+			current.setDato(dato);
+		} else {
+			throw new IndexOutOfBoundsException(
+					"NO se puede regresar el elemento en la posicion" + pos + "en la lista de tamaño" + this.size);
+		}
+	}
+
+	public E borrarEN (int pos) { //throw indexoutofboundsexception
+		
+	}
+	
 	public String toString() {
 		String res = "";
 		NodoLE<E> current = this.inicio;
@@ -77,6 +200,12 @@ public class MiListaEnlazada<E> {
 		}
 		lista1.insertarFin(10);
 		System.out.println(lista1);
+
+		Integer[] listNumeritos = { 1, 3, 5, 7, 9 };
+		MiListaEnlazada<Integer> lista2 = new MiListaEnlazada<>(listNumeritos);
+
+		lista2.insertarEn(0, 3);
+		System.out.println(lista2);
 
 	}
 
