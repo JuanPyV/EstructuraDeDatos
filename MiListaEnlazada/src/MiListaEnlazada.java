@@ -178,9 +178,9 @@ public class MiListaEnlazada<E> {
 		}
 	}
 
-	public E borrarEN (int pos) { //throw indexoutofboundsexception
+	//public E borrarEN (int pos) { //throw indexoutofboundsexception
 		
-	}
+	//}
 	
 	public String toString() {
 		String res = "";
@@ -208,7 +208,7 @@ public class MiListaEnlazada<E> {
 		System.out.println(lista2);
 
 	}
-
+	
 }
 
 class NodoLE<E> {
