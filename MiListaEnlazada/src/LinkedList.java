@@ -132,7 +132,6 @@ public class LinkedList<E> {
 		listita.insertarEn(11, 6);
 
 		System.out.println(listita);
-		System.out.println("Oli");
 
 	}
 }

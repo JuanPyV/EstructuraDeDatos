@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 public class ListaEnlazadaDoble<E> {
 	
 	private int size;
-	private NodoLE<E> inicio, fin;
+	private NodoLDE<E> inicio, fin;
 
 	public ListaEnlazadaDoble() {
 		this.inicio = this.fin = null;
@@ -36,10 +36,10 @@ public class ListaEnlazadaDoble<E> {
 	}
 	
 	public void insertarInicio(E dato) {
-		NodoLE<E> nvo = new NodoLE<E>(dato, null, this.inicio);
+		NodoLDE<E> nvo = new NodoLDE<E>(dato, null, this.inicio);
 		this.inicio = nvo;
 		nvo.setPrevious(nvo);
-		//solamente si está vacía
+		//solamente si estï¿½ vacï¿½a
 		if (estaVacia()) {
 			this.fin = nvo;
 		}
@@ -50,7 +50,7 @@ public class ListaEnlazadaDoble<E> {
 		if (estaVacia()) {
 			insertarInicio(dato);
 		} else {
-			NodoLE<E> nvo = new NodoLE<E>(dato, this.fin, null);
+			NodoLDE<E> nvo = new NodoLDE<E>(dato, this.fin, null);
 			this.fin.setNext(nvo);
 			this.fin = nvo;
 			this.size++;
@@ -63,8 +63,8 @@ public class ListaEnlazadaDoble<E> {
 		} else if (pos == size) {
 			insertarFin(dato);
 		} else {
-			NodoLE<E> nvo = new NodoLE<E>(dato);
-			NodoLE<E> current = this.fin;
+			NodoLDE<E> nvo = new NodoLDE<E>(dato);
+			NodoLDE<E> current = this.fin;
 			for (int i = size; i > pos+1; i--) {
 				current = current.getPrevious();
 			}
@@ -86,7 +86,7 @@ public class ListaEnlazadaDoble<E> {
 			}
 			return dato;
 		} catch (NullPointerException e) {
-			throw new IndexOutOfBoundsException("No se puede borrar el inicio de una lista vacía");
+			throw new IndexOutOfBoundsException("No se puede borrar el inicio de una lista vacï¿½a");
 		}
 	}
 	
@@ -100,15 +100,15 @@ public class ListaEnlazadaDoble<E> {
 			}
 			return dato;
 		} catch (NullPointerException e) {
-			throw new IndexOutOfBoundsException("No se puede borrar el inicio de una lista vacía");
+			throw new IndexOutOfBoundsException("No se puede borrar el inicio de una lista vacï¿½a");
 		}
 	}
 	
 	public void setEn(E dato, int pos) {
 		if (pos > this.size || pos < 0) {
-			throw new NoSuchElementException("Posición Inválida");
+			throw new NoSuchElementException("Posiciï¿½n Invï¿½lida");
 		}
-		NodoLE<E> current = this.inicio;
+		NodoLDE<E> current = this.inicio;
 		for (int i = 0; i < pos; i++) {
 			current = current.getNext();
 		}
@@ -116,7 +116,7 @@ public class ListaEnlazadaDoble<E> {
 	}
 	
 	public E borrarEn(int pos) {
-		NodoLE<E> current = this.inicio;
+		NodoLDE<E> current = this.inicio;
 		for (int i = 0; i < pos-2; i++) {
 			current = current.getNext();
 		}
@@ -129,7 +129,7 @@ public class ListaEnlazadaDoble<E> {
 	
 	public String toString() {
 		String res = "";
-		NodoLE<E> current = this.inicio;
+		NodoLDE<E> current = this.inicio;
 		for (int i = 0; i < size; i++) {
 			res += current.getDato() + ", ";
 			current = current.getNext();
@@ -142,24 +142,25 @@ public class ListaEnlazadaDoble<E> {
 		ListaEnlazadaDoble<Integer> lista = new ListaEnlazadaDoble<>(listin);
 		lista.insertarInicio(2);
 		lista.insertarFin(20);
+		lista.setEn(30, 2);
 		System.out.println(lista);
 	}
 }
 
-class NodoLE<E> {
-	private NodoLE<E> next, previous;
+class NodoLDE<E> {
+	private NodoLDE<E> next, previous;
 	private E dato;
 	
-	public NodoLE<E> getNext() {
+	public NodoLDE<E> getNext() {
 		return next;
 	}
-	public void setNext(NodoLE<E> next) {
+	public void setNext(NodoLDE<E> next) {
 		this.next = next;
 	}
-	public NodoLE<E> getPrevious() {
+	public NodoLDE<E> getPrevious() {
 		return previous;
 	}
-	public void setPrevious(NodoLE<E> previous) {
+	public void setPrevious(NodoLDE<E> previous) {
 		this.previous = previous;
 	}
 	public E getDato() {
@@ -169,14 +170,14 @@ class NodoLE<E> {
 		this.dato = dato;
 	}
 	
-	public NodoLE(E dato, NodoLE<E> previous, NodoLE<E> next) {
+	public NodoLDE(E dato, NodoLDE<E> previous, NodoLDE<E> next) {
 		super();
 		this.dato = dato;
 		this.previous = previous;
 		this.next = next;
 	}
 	
-	public NodoLE(E dato) {
+	public NodoLDE(E dato) {
 		this(dato, null, null);
 	}
 }
