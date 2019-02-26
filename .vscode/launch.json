@@ -1,0 +1,117 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Arreglo<Arreglo>",
+            "request": "launch",
+            "mainClass": "Arreglo",
+            "projectName": "Arreglo"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Factorial<Fibonacci>",
+            "request": "launch",
+            "mainClass": "Factorial",
+            "projectName": "Fibonacci"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SierpinskiGasket<Fractal>",
+            "request": "launch",
+            "mainClass": "SierpinskiGasket",
+            "projectName": "Fractal"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Mergesort<Mergesort>",
+            "request": "launch",
+            "mainClass": "Mergesort",
+            "projectName": "Mergesort"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LinkedList<MiListaEnlazada>",
+            "request": "launch",
+            "mainClass": "LinkedList",
+            "projectName": "MiListaEnlazada"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ListaEnlazadaDoble<MiListaEnlazada>",
+            "request": "launch",
+            "mainClass": "ListaEnlazadaDoble",
+            "projectName": "MiListaEnlazada"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-recursividad<Recursividad>",
+            "request": "launch",
+            "mainClass": "recursividad",
+            "projectName": "Recursividad"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-bubbleSort<bubbleSort>",
+            "request": "launch",
+            "mainClass": "bubbleSort",
+            "projectName": "bubbleSort"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-bubbleSortGenericos<bubbleSort>",
+            "request": "launch",
+            "mainClass": "bubbleSortGenericos",
+            "projectName": "bubbleSort"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BusquedaBinaria<busquedaBinaria>",
+            "request": "launch",
+            "mainClass": "BusquedaBinaria",
+            "projectName": "busquedaBinaria"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-binarySearchRecGen<busquedaBinaria>",
+            "request": "launch",
+            "mainClass": "binarySearchRecGen",
+            "projectName": "busquedaBinaria"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-nReina<nReinas>",
+            "request": "launch",
+            "mainClass": "nReina",
+            "projectName": "nReinas"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-quickSort<quickSort>",
+            "request": "launch",
+            "mainClass": "quickSort",
+            "projectName": "quickSort"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-InsertionSort",
+            "request": "launch",
+            "mainClass": "InsertionSort"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Palindromo",
+            "request": "launch",
+            "mainClass": "Palindromo"
+        }
+    ]
+}

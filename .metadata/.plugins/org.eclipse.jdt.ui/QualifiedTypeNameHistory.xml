@@ -3,6 +3,16 @@
 <fullyQualifiedTypeName name="BusquedaBinaria"/>
 <fullyQualifiedTypeName name="binarySearchRecGen"/>
 <fullyQualifiedTypeName name="bubbleSortGenericos"/>
-<fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="Mergesort"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="quickSort"/>
+<fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+<fullyQualifiedTypeName name="MyQueue"/>
+<fullyQualifiedTypeName name="MiListaEnlazada"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.lang.NoClassDefFoundError"/>
+<fullyQualifiedTypeName name="MyStack"/>
 </qualifiedTypeNameHistroy>

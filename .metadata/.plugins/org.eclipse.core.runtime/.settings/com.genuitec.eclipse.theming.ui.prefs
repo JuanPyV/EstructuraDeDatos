@@ -1,15 +1,18 @@
+=\=\=\=\=\=\=
+<<<<<<<=Updated upstream
+>>>>>>>=Stashed changes
 applyBackground=false
 approved.defs.file.last.changed.time=1540329737000
 codemix.dont.show.upsell.until=1550193714225
-configurationInstallLocation=/C\:/Users/darko/eclipse/java-2018-12/eclipse/
+configurationInstallLocation=/home/sn0w/eclipse/java-2018-12/eclipse/
 eclipse.preferences.version=1
 iconcolormode=primary
 includeThemingInOomph=false
-last.download.attempt.time=1549485099399
-lastConfiguration=1549499812672
+last.download.attempt.time=1551110829228
+lastConfiguration=1551110821112
 newinstall=false
 showWelcomeDialog=false
-workbench.theme=Dark Custom
+workbench.theme=Dark Blue
 workbench.theme.custom.hue=270
 workbench.theme.custom.lum=0.06
 workbench.theme.custom.sat=40
