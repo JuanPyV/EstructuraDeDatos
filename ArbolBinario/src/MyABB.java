@@ -1,7 +1,5 @@
 /**
- * Juan Pablo Velazco 
- * Feb 21, 2019 
- * MyABB.java
+ * Juan Pablo Velazco Feb 21, 2019 MyABB.java
  */
 
 public class MyABB<E extends Comparable<E>> {
@@ -38,8 +36,76 @@ public class MyABB<E extends Comparable<E>> {
 		this.size++;
 	}
 
-	public static void main(String[] args) {
+	public E borrar(E dato) {
+		NodoABB<E> current = this.raiz, prev = null;
+
+		boolean lado; // lado es true entonces el hijo esta del lado izquierdo sino esta del lado
+						// derecho
+
+		// buscando al nodo a borrar y al padre del nodo a borrar
 		
+		while (!dato.equals(current.data)) {
+			
+			prev = current;
+			
+			// current esta igualado a la condicion, si es verdadera toma el valor que esta
+			// entre el ? y : y si es falso toma el ultimo valor
+			
+			current = dato.compareTo(current.data) < 0 ? current.left : current.right;
+		}
+
+		// current ya esta en el nodo a borrar y prev en el parent de current
+
+		// revisar si current esta del lado izquierdo o derecho del padre
+		
+		lado = prev.left == current; // si es verdaero current es izq si no der
+		
+		// caso en el que el nodo a borrar es una hoja
+		if (current.right == null && current.left == null) {
+			if (lado) {
+				prev.left = null;
+			} else {
+				prev.right = null;
+			}
+
+			// caso 2 solo tiene un hijo y es el izquierdo
+		} else if (current.right == null) {
+			if (lado) {
+				prev.left = current.left;
+			} else {
+				prev.right = current.left;
+			}
+
+			// caso 2.5 solo tiene un hijo y es el derecho 
+		} else if (current.left == null) {
+			if (lado) {
+				prev.left = current.right;
+			}
+			else {
+				prev.right = current.right;
+
+			}
+			//tiene dos hijos el nodo a eliminar
+		}else {
+			NodoABB<E> predecesor = predecesor(current);
+			current.data = predecesor.data;
+			predecesor = null;
+		}
+		
+		
+		
+	}
+	
+	private NodoABB<E> predecesor(NodoABB<E> nodo){
+		NodoABB<E> current= nodo.left;
+		while(current.right != null) {
+			current = current.right;
+		}
+		return current;
+	}
+
+	public static void main(String[] args) {
+
 		MyABB<Integer> arbol = new MyABB<>();
 		arbol.insert(50);
 		arbol.insert(25);
@@ -67,8 +133,8 @@ class NodoABB<E> {
 	public NodoABB(E data) {
 		this(data, null, null);
 	}
-	
+
 	public String toString() {
 		return this.data.toString();
-		}
+	}
 }
