@@ -1,9 +1,10 @@
+
+// Juan Pablo Velazco Velaquez
+//Mayra Patricia Guajardo Palomera
+//Comentario: Luis Gerardo nos asesoro con la explicacion del problema
+
 import java.util.NoSuchElementException;
 
-//Autor: A00368753 Juan Pablo Velazco Velasquez
-//Nombre de la clase: MiLIstaEnlazada.java
-//Fecha: 13/02/2019
-//Comentarios u observaciones: 
 public class MiListaEnlazada<E> {
 
 	private NodoLE<E> inicio, fin;
@@ -28,8 +29,8 @@ public class MiListaEnlazada<E> {
 			this.size++;
 		}
 	}
-	
-	public NodoLE<E> getInicio(){
+
+	public NodoLE<E> getInicio() {
 		return inicio;
 	}
 
@@ -181,10 +182,10 @@ public class MiListaEnlazada<E> {
 		}
 	}
 
-	//public E borrarEN (int pos) { //throw indexoutofboundsexception
-		
-	//}
-	
+	// public E borrarEN (int pos) { //throw indexoutofboundsexception
+
+	// }
+
 	public String toString() {
 		String res = "";
 		NodoLE<E> current = this.inicio;
@@ -211,7 +212,7 @@ public class MiListaEnlazada<E> {
 		System.out.println(lista2);
 
 	}
-	
+
 }
 
 class NodoLE<E> {
