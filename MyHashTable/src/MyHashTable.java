@@ -52,11 +52,7 @@ public class MyHashTable<k, v> {
 
 		}
 
-		System.out.println(this.tabla.length);
-
 	}
-
-//	}
 
 	public v get(k llave) {
 		// calcular el indice donde deberia estar la llave
@@ -77,34 +73,51 @@ public class MyHashTable<k, v> {
 		// buscar en la lista si esta un nodo con la llave buscada, si esta borrar el
 		// nodo con la llave si no // no sush element
 		int index = llave.hashCode() % this.tabla.length;
-
-	}
-
-	public boolean containsKey(k llave) { 
-		  // regresa true si la tabla tiene la llave que paso como parametro 
-		  int index = llave.hashCode() % this.tabla.length;
-		  	  
-		  for(int i = 0; i < tabla[index].size(); i++) {
-			  if(tabla[index].getEn(i).llave.equals(llave)) {
-				  return true;
-			  }else {
-				  return false;
-			  }
-	}
-	 
-	public void clear() { 
-		// vacia la tabla 
-		
+		for (int i = 0; i < tabla[index].size(); i++) {
+			if (tabla[index].getEn(i).llave.equals(llave)) {
+				return tabla[index].borrarEn(i).getValor();
+			}
 		}
+		throw new NoSuchElementException("La llave: " + llave + ", no fue encontrada");
+	}
+
+	public boolean containsKey(k llave) {
+		// regresa true si la tabla tiene la llave que paso como parametro
+		int index = llave.hashCode() % this.tabla.length;
+
+		for (int i = 0; i < tabla[index].size(); i++) {
+			if (tabla[index].getEn(i).llave.equals(llave)) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public void clear() { 
+		// vacia la tabla
+		this.tabla = (MiListaEnlazada<MyNodeHash<k, v>>[]) new MiListaEnlazada[11];
+		for (int i = 0; i < this.tabla.length; i++) {
+			this.tabla[i] = new MiListaEnlazada<>();
+		}
+		this.size = 0;
+		
+		
 	}
 
 	public static void main(String[] args) {
 
 		MyHashTable<Integer, String> tablita = new MyHashTable<>();
 		tablita.put(2, "Hola");
-		tablita.put(3, "Adios");
-		System.out.println(tablita.get(2));
+		tablita.put(3, "Como");
+		tablita.put(4, "Estas");
+		tablita.put(5, "Yo");
+		tablita.put(6, "Bien");
+		tablita.put(7, "Adios");
+		System.out.println(tablita.get(5));
 		tablita.rehashing();
+		System.out.println(tablita.containsKey(3));
+		System.out.println(tablita.delete(6));
+		tablita.clear();
 
 	}
 

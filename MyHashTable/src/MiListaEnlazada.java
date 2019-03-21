@@ -28,8 +28,8 @@ public class MiListaEnlazada<E> {
 			this.size++;
 		}
 	}
-	
-	public NodoLE<E> getInicio(){
+
+	public NodoLE<E> getInicio() {
 		return inicio;
 	}
 
@@ -181,10 +181,25 @@ public class MiListaEnlazada<E> {
 		}
 	}
 
-	//public E borrarEN (int pos) { //throw indexoutofboundsexception
-		
-	//}
-	
+	public E borrarEn(int pos) {
+		if (pos > size - 1 || pos < 0) {
+			throw new IndexOutOfBoundsException("Index incorrecto");
+		} else if (pos == 0) {
+			return borrarInicio();
+		} else if (pos == this.size) {
+			return borrarFin();
+		} else {
+			NodoLE<E> current = this.inicio;
+			for (int i = 0; i < pos - 1; i++) {
+				current = current.getNext();
+			}
+			E dato = current.getNext().getDato();
+			current.setNext(current.getNext().getNext());
+			size--;
+			return dato;
+		}
+	}
+
 	public String toString() {
 		String res = "";
 		NodoLE<E> current = this.inicio;
@@ -211,7 +226,7 @@ public class MiListaEnlazada<E> {
 		System.out.println(lista2);
 
 	}
-	
+
 }
 
 class NodoLE<E> {
