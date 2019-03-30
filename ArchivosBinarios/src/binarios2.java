@@ -1,28 +1,39 @@
-import java.io.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class binarios2 {
-	public static void main(String[] args) {
-		FileWriter fichero = null;
-		PrintWriter pw = null;
-		try {
-			fichero = new FileWriter("ficheros/datos2.bin");
-			pw = new PrintWriter(fichero);
 
-			for (int i = 0; i < 10; i++)
-				pw.println("Linea " + i);
+	public binarios2() {
 
-		} catch (Exception e) {
-
-			e.printStackTrace();
-		} finally {
-			try {
-				// Nuevamente aprovechamos el finally para
-				// asegurarnos que se cierra el fichero.
-				if (null != fichero)
-					fichero.close();
-			} catch (Exception e2) {
-				e2.printStackTrace();
-			}
-		}
 	}
+
+	public void escritura() {
+		File file;
+		FileOutputStream fileOutputStream;
+		ObjectOutputStream objectOutputStream;
+
+		file = new File("ficheroBinario.bin");
+		try {
+			fileOutputStream = new FileOutputStream(file);
+			objectOutputStream = new ObjectOutputStream(fileOutputStream);
+			
+			
+			objectOutputStream.writeObject(obj);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public void lectura() {
+
+	}
+
 }

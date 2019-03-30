@@ -93,15 +93,14 @@ public class MyHashTable<k, v> {
 		return false;
 	}
 
-	public void clear() { 
+	public void clear() {
 		// vacia la tabla
 		this.tabla = (MiListaEnlazada<MyNodeHash<k, v>>[]) new MiListaEnlazada[11];
 		for (int i = 0; i < this.tabla.length; i++) {
 			this.tabla[i] = new MiListaEnlazada<>();
 		}
 		this.size = 0;
-		
-		
+
 	}
 
 	public static void main(String[] args) {

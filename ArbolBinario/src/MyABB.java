@@ -99,8 +99,9 @@ public class MyABB<E extends Comparable<E>> {
 			if (current.left == predecesor) {
 				predecesor = null;
 			} else {
-				borrar(predecesor.data);
-			}
+				E datin = borrar(predecesor.data);
+				current.data = datin;
+			} 
 		}
 		return current.data;
 
