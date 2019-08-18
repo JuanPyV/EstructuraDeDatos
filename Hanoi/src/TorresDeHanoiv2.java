@@ -58,6 +58,6 @@ class TorresDeHanoiv2 {
 		tower[2] = new Stack<Integer>();
 		tower[3] = new Stack<Integer>();
 
-		Torresitas(4);
+		Torresitas(5);
 	}
 }
