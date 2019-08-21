@@ -50,7 +50,7 @@ public class nReina {
 	
 	
 	public static void main(String [] args) {
-		nReina tablero = new nReina(8);
+		nReina tablero = new nReina(4);
 		tablero.busca();
 	}
 }
