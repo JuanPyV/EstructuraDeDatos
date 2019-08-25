@@ -46,8 +46,7 @@ public class SierpinskiGasket extends JFrame {
 			this.pintaTriangulos(g, nivel-1, pmCA, pmBC, c);
 		}
 	}
-	
-	
+		
 
 	public static void main(String[] args) {
 		new SierpinskiGasket();

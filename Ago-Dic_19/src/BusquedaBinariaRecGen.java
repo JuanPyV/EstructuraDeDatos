@@ -1,9 +1,9 @@
 //Autor: A00368753 Juan Pablo Velazco Velasquez
-//Nombre de la clase: binarySearchRecGen.java
-//Fecha: 26/01/2019
+//Nombre de la clase: Busqueda Binaria con recursiva y genericos 
+//Fecha: 23/08/2019
 //Comentarios u observaciones: 	
 
-public class binarySearchRecGen {
+public class BusquedaBinariaRecGen {
 
 	public static <E extends Comparable<E>> int binarySearchRec(E[] valores, E valor) {
 		return binarySearchRec(valores, valor, 0, valores.length - 1);
