@@ -11,14 +11,6 @@ public class LinkedList<E> {
 	}
 
 	public LinkedList(E[] datos) {
-		// this.size = datos.length;
-		/*
-		 * for (int i = size; i > datos.length; i--) {
-		 * 
-		 * insertarInicio(datos[i]);
-		 * 
-		 * }
-		 */
 		for (int i = 0; i < datos.length; i++) {
 			insertarEn(datos[i], i);
 		}
@@ -68,8 +60,7 @@ public class LinkedList<E> {
 			this.fin = nvo;
 			this.size++;
 		}
-		
-		
+			
 		
 		/*
 		if (vacia()) {
@@ -154,19 +145,15 @@ class Nodo<E> {
 	public E getDato() {
 		return dato;
 	}
-
 	public Nodo<E> getNext() {
 		return next;
 	}
-
 	public Nodo<E> getPrev() {
 		return prev;
 	}
-
 	public void setDato(E dato) {
 		this.dato = dato;
 	}
-
 	public void setNext(Nodo<E> next) {
 		this.next = next;
 	}

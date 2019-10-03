@@ -42,7 +42,7 @@ public class quickSort {
 		 String[] arreglito = { "1959", "1809", "1953", "1950", "PRIMERA", "AM�RICA", "CUENTOS", "DE", "DE", "DEL",
 					"DEL", "EL", "EL", "REVISTA", "EN", "ANTERIORMENTE", "EN", "LLANO", "EN", "EN", "ES", "ESCRITOR",
 					"ESCRITOR", "FUE", "HAB�A", "JUAN", "MEXICANO", "LA", "RULFO", "LA", "LLAMAS", "PERO", "PUBLICACI�N",
-					"PUBLICADO", "RECOPILACI�N", "SE", "T�TULO", "UNA", "PEDRO" };
+					"PUBLICADO", "RECOPILACIioN", "SE", "T�TULO", "UNA", "PEDRO" };
 		 quickSort.quicksort(arreglito);
 		 
 		 

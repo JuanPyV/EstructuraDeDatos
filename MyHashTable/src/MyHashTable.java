@@ -75,6 +75,7 @@ public class MyHashTable<k, v> {
 		int index = llave.hashCode() % this.tabla.length;
 		for (int i = 0; i < tabla[index].size(); i++) {
 			if (tabla[index].getEn(i).llave.equals(llave)) {
+				this.size--;
 				return tabla[index].borrarEn(i).getValor();
 			}
 		}

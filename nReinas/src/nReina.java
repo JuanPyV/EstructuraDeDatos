@@ -1,4 +1,3 @@
-
 public class nReina {
 	private int[] reinas;
 	

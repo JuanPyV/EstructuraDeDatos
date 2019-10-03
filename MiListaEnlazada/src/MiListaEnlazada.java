@@ -58,7 +58,7 @@ public class MiListaEnlazada<E> {
 	}
 
 	public void insertarInicio(E dato) {
-		NodoLE<E> nvo = new NodoLE(dato, this.inicio);
+		NodoLE<E> nvo = new NodoLE<>(dato, this.inicio);
 		this.inicio = nvo;
 		// Si esta vacia toda la lista el fin tambien es el inicio
 		if (this.estaVacia()) {

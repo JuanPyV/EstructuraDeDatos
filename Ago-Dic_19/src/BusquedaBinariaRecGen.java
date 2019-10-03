@@ -26,8 +26,8 @@ public class BusquedaBinariaRecGen {
 
 	public static <E> void main(String[] args) {
 
-		String[] palabritas = { "avion", "aeronave", "autobus", "barco", "carro", "camioneta", "tren" };
-		System.out.println(binarySearchRec(palabritas, "barco"));
+		String[] palabritas = { "avion", "aeronave", "autobus", "barco", "carro", "camioneta", "tren","perro", "zacate" };
+		System.out.println(binarySearchRec(palabritas, "carro"));
 	}
 
 }

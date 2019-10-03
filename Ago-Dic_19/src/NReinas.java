@@ -38,7 +38,6 @@ public class NReinas {
 				} else {
 					imprimeSolucion();
 				}
-
 			}
 		}
 	}
