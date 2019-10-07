@@ -30,7 +30,7 @@ public class Fibonacci {
 	System.out.println(fibonacciOpt(500));
 	long fin = System.nanoTime();
 	long duracion = fin- ini;
-	System.out.println("Tardó: "+duracion/1000000000.0 + "seg");
+	System.out.println("Tarda: "+duracion/1000000000.0 + "seg");
 
 	}
 }
