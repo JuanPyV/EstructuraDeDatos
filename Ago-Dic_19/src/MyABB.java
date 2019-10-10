@@ -1,3 +1,8 @@
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: MyABB (Implementacion de ABB) 
+//Fecha: 09/10/2019
+//Comentarios u observaciones: 
+
 import java.util.NoSuchElementException;
 
 public class MyABB<E extends Comparable<E>> {
@@ -30,16 +35,28 @@ public class MyABB<E extends Comparable<E>> {
 	}
 
 	public void insert(E value) {
-		/*
-		 * NodoABB<E> nvo = new NodoABB<>(value); if (this.root != null) { NodoABB<E>
-		 * current = new NodoABB<>(value); NodoABB<E> prev = null;
-		 * 
-		 * current = this.root; while (current != null) { prev = current; current =
-		 * value.compareTo(current.value) < 0 ? current.left : current.right; } //
-		 * Current esta en null y prev esta en quien sera el padre de dato. if
-		 * (value.compareTo(prev.value) < 0) { prev.left = nvo; } else { prev.right =
-		 * nvo; } } else { this.root = nvo; } this.size++;
-		 */
+
+		NodoABB<E> nvo = new NodoABB<>(value);
+		if (this.root != null) {
+			NodoABB<E> current = new NodoABB<>(value);
+			NodoABB<E> prev = null;
+
+			current = this.root;
+			while (current != null) {
+				prev = current;
+				current = value.compareTo(current.value) < 0 ? current.left : current.right;
+			}
+			// Current esta en null y prev esta en quien sera el padre de dato.
+			if (value.compareTo(prev.value) < 0) {
+				prev.left = nvo;
+			} else {
+				prev.right = nvo;
+			}
+		} else {
+			this.root = nvo;
+		}
+		this.size++;
+
 	}
 
 	public void preorden() {
@@ -98,33 +115,77 @@ public class MyABB<E extends Comparable<E>> {
 				} else {
 					parent.right = null;
 				}
-				return current.value;
+				
 			}
+			//solo tiene un hijo y es el izquierdo
+			else if (parent.right == null) {
+				if (parent.left == current) {
+					parent.left = current.left;
+				} else {
+					parent.right = current.left;
+				}
+
+				// solo tiene un hijo y es el derecho
+			} else if (current.left == null) {
+				if (parent.left == current) {
+					parent.left = current.right;
+				} else {
+					parent.right = current.right;
+
+				}
+				//dos hijos el nodo a eliminar
+			} else {
+				NodoABB<E> predecesor = predecesor(current);
+				current.value = predecesor.value;
+				if (current.left == predecesor) {
+					predecesor = null;
+				} else {
+					E dato = remove(predecesor.value);
+					current.value = dato	;
+				}
+			}
+			return current.value;
 		} catch (NullPointerException e) {
 			throw new NoSuchElementException("No se encontro el valor " + value + " en el arbol");
 		}
 
 	}
+	
+	private NodoABB<E> predecesor(NodoABB<E> nodo) {
+		NodoABB<E> current = nodo.left;
+		while (current.right != null) {
+			current = current.right;
+		}
+		return current;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		MyABB<Integer> arbol = new MyABB<>();
-		arbol.root = new NodoABB<>(50);
-		arbol.root.left = new NodoABB<>(25);
-		arbol.root.right = new NodoABB<>(75);
-		arbol.root.right.left = new NodoABB<>(60);
-
-		// System.out.println(arbol.search(85));
-		// arbol.preorden();
-		// arbol.inorden();
-		arbol.postorden();
+		arbol.insert(21);
+		arbol.insert(13);
+		arbol.insert(33);
+		arbol.insert(10);
+		arbol.insert(18);
+		arbol.insert(25);
+		arbol.insert(40);
+		arbol.insert(29);
+		arbol.insert(27);
+		arbol.insert(30);
+		arbol.preorden();
+		System.out.println("");
+		//arbol.inorden();
+		System.out.println(arbol.remove(30));
+		System.out.println("");
+		arbol.preorden();
+		//arbol.postorden();
 
 	}
 
 }
 
 class NodoABB<E extends Comparable<E>> {
-	final E value;
+	E value;
 	NodoABB<E> left, right;
 
 	public NodoABB(E value) {
