@@ -89,11 +89,10 @@ public class MyHashTable<V, K> {
 			}
 		}
 		return false;
-
 	}
 
+	
 	public static void main(String[] args) {
-
 	}
 
 }
