@@ -77,6 +77,7 @@ public class maxHeap<E extends Comparable<E>> {
 		heap.insertar(19);
 		heap.heapify();
 		heap.borrar();
+		
 
 	}
 }
