@@ -1,3 +1,8 @@
+//Autor: A00368753 Juan Pablo Velazco Velasquez
+//Nombre de la clase: MyHeap (Implementacion de Heap) 
+//Fecha: 27/10/2019
+//Comentarios u observaciones: 
+
 import java.util.Arrays;
 
 public class MyHeap<E extends Comparable<E>> {
