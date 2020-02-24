@@ -25,12 +25,25 @@ public class Ordenamientos {
 
 	// Mergesort
 
+	public static <E extends Comparable<E>> void mergesort(E[] datos) {
+		mergesort(datos, 0, datos.length - 1);
+	}
+
+	private static <E extends Comparable<E>> void mergesort(E[] datos, int primero, int ultimo) {
+		if (primero < ultimo) {
+			int central = (primero + ultimo) / 2;
+			mergesort(datos, primero, central);
+			mergesort(datos, central + 1, ultimo);
+			mezcla(datos, primero, ultimo);
+		}
+	}
+
 	private static <E extends Comparable<E>> void mezcla(E[] datos, int primero, int ultimo) {
 		// El arreglo de datos esta ordenado desde primero-central y de central+1-ultimo
 		// pasar los datos ordenados a nuevo arreglo y que queden ordenanod
 		// Al final regresar los datos al arreglo original
 		E[] tmpArreglo = (E[]) new Comparable[ultimo - primero + 1];
-		int central = (primero) / 2, j = primero, k = central + 1;
+		int central = (primero + ultimo) / 2, j = primero, k = central + 1;
 
 		for (int i = 0; i < tmpArreglo.length; i++) {
 			if (j <= central && k <= ultimo) {
@@ -49,20 +62,6 @@ public class Ordenamientos {
 
 	}
 
-
-	public static <E extends Comparable<E>> void mergesort(E[] datos) {
-		mergesort(datos, 0, datos.length - 1);
-	}
-
-	public static <E extends Comparable<E>> void mergesort(E[] datos, int primero, int ultimo) {
-		if (primero < ultimo) {
-			int central = (primero + ultimo) / 2;
-			mergesort(datos, primero, central);
-			mergesort(datos, central + 1, ultimo);
-			mezcla(datos, primero, ultimo);
-		}
-	}
-
 	////////////////////////////////////////////////////////////////////
 
 	private static <E> void imprimirArreglo(E[] datos) {
@@ -77,10 +76,9 @@ public class Ordenamientos {
 		imprimirArreglo(datos);
 		bubbleSort(datos);
 		imprimirArreglo(datos);
-		
-		String[] arreglin = { "Juan", "Daniel", "Pablo", "Mayra", "Frank", "Paco", "Patricio", "Bob", "Esponja",
-				"Batman", "IronMan" };
-		imprimirArreglo(arreglin);
+
+		String[] arreglin = { "mythical", "mightiest", "cuddly", "distant", "sissy", "cyanide", "pillbox", "glamor",
+				"blink", "cuddle", "dinosaur", "horrible" };
 		Ordenamientos.mergesort(arreglin);
 		imprimirArreglo(arreglin);
 		// TODO Auto-generated method stub

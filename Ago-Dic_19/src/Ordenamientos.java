@@ -137,6 +137,7 @@ public class Ordenamientos<E> {
 		Integer[] arreglin2 = { 2,5,3,1 };
 		Ordenamientos.mergesort(arreglin);
 		Ordenamientos.imprimeArreglo(arreglin);
+		
 		Ordenamientos.quicksort(arreglin2);
 		Ordenamientos.imprimeArreglo(arreglin2);
 		/*
