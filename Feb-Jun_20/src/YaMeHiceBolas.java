@@ -28,7 +28,7 @@ public class YaMeHiceBolas extends JFrame{
 		this.pintaCirculo(g, this.nivel, this.x1, this.y1, this.largo);
 		
 	}
-	
+
 	public void dibujaCirculo(Graphics g, int x1, int y1, int largo ) {
 		g.drawOval(x1, y1, largo, largo);
 	}

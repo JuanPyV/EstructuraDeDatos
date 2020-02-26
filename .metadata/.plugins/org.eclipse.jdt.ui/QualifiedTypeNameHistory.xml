@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="NReinas"/>
     <fullyQualifiedTypeName name="SierpinskiGasket"/>
     <fullyQualifiedTypeName name="YaMeHiceBolas"/>
-    <fullyQualifiedTypeName name="Ordenamientos"/>
     <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="NodoLE"/>
     <fullyQualifiedTypeName name="MiListaEnlazada"/>
@@ -41,4 +40,5 @@
     <fullyQualifiedTypeName name="java.awt.Graphics"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="FractalSG"/>
+    <fullyQualifiedTypeName name="Ordenamientos"/>
 </qualifiedTypeNameHistroy>
