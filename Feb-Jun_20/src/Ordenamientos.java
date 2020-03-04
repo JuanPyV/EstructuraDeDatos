@@ -1,6 +1,6 @@
 //Autor: A00368753 Juan Pablo Velazco Velasquez
 //Nombre de la clase: Ordenamientos.java
-//Fecha: 23/02/2020
+//Fecha: 26/02/2020
 //Comentarios u observaciones:	
 
 public class Ordenamientos {
@@ -78,28 +78,20 @@ public class Ordenamientos {
 			int posPivote = particion(datos, left, right);
 			quicksort(datos, left, posPivote - 1);
 			quicksort(datos, posPivote + 1, right);
-		}
+		}  
 	}
 
-	private static <E extends Comparable<E>> int particion(E[] datos, int left, int right) {
-		/*
-		 * E p = datos[left]; int i = left + 1; for (int j = left + 1; j < right; j++) {
-		 * if (datos[j].compareTo(p) < 0) { swap(datos, i, j); i++; } } swap(datos,
-		 * left, i - 1); return i - 1; }
-		 */
-
-		E p = datos[left];
-		int i = left + 1;
-
-		for (int j = left + 1; j <= right; j++) {
-			if (datos[j].compareTo(p) < 0) {
-				swap(datos, i, j);
-				i++;
-			}
-		}
-		swap(datos, left, i - 1);
-		return i - 1;
-	}
+	private static <E extends Comparable<E>> int particion(E[] datos, int left,int right) {
+		
+		  E p = datos[left]; 
+		  int i = left + 1; 
+		  for (int j = left + 1; j <= right; j++) {
+		  if (datos[j].compareTo(p) < 0) { 
+		  swap(datos, i, j); i++; } 
+		 } 
+		 swap(datos, left, i - 1); 
+		  return i - 1; 
+		  }
 
 	////////////////////////////////////////////////////////////////////
 

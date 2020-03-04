@@ -20,7 +20,7 @@ public class LinkedList<E> {
 		try {
 			return this.inicio.getDato();
 		} catch (NullPointerException e) {
-			throw new NoSuchElementException("No se puede regresar valor de lista vacía");
+			throw new NoSuchElementException("No se puede regresar valor de lista vacia");
 		}
 
 	}
