@@ -24,6 +24,18 @@ public class BusquedaBinaria {
 	}
 
 	private static <E extends Comparable<E>> int binarySearchRec(E[] valores, E valor, int min, int max) {
+		int avg;
+
+		avg = (min + max) / 2;
+		if (valor.equals(valores[avg])) {
+			return avg;
+		} else if (valor.compareTo(valores[avg]) < 0) {
+			return binarySearchRec(valores, valor, min, avg - 1);
+		} else if (valor.compareTo(valores[avg]) > 0) {
+			return binarySearchRec(valores, valor, avg + 1, max);
+		}
+
+		return -1;	
 	}
 
 	public static <E> void main(String[] args) {

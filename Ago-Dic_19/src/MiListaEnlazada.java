@@ -185,7 +185,7 @@ public class MiListaEnlazada<E> {
 
 		Integer[] listNumeritos = { 1, 3, 5, 7, 9 };
 		MiListaEnlazada<Integer> lista = new MiListaEnlazada<>(listNumeritos);
-
+		System.out.println(lista);
 		lista.insertAt(48, 3);
 		lista.insertarAtLast(23);
 		lista.insertAtFirst(11);
@@ -194,6 +194,7 @@ public class MiListaEnlazada<E> {
 
 		System.out.println(lista.removeFirst());
 		System.out.println(lista.removeLast());
+		System.out.println(lista.removeAt(5));
 
 		System.out.println(lista);
 

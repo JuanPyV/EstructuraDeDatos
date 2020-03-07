@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="NReinas"/>
     <fullyQualifiedTypeName name="SierpinskiGasket"/>
     <fullyQualifiedTypeName name="YaMeHiceBolas"/>
-    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="MiListaEnlazada"/>
     <fullyQualifiedTypeName name="MyStack"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
@@ -29,7 +28,6 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.lang.IllegalStateException"/>
     <fullyQualifiedTypeName name="java.security.NoSuchAlgorithmException"/>
-    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
     <fullyQualifiedTypeName name="Factorial"/>
     <fullyQualifiedTypeName name="Fibonacci"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
@@ -41,5 +39,7 @@
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="NodoLE"/>
     <fullyQualifiedTypeName name="ListaEnlazada"/>
+    <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
 </qualifiedTypeNameHistroy>
