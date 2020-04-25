@@ -40,6 +40,7 @@
     <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="ListaEnlazada"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="MyStack"/>
     <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
+    <fullyQualifiedTypeName name="MyStack"/>
+    <fullyQualifiedTypeName name="MyNodoABB"/>
 </qualifiedTypeNameHistroy>
