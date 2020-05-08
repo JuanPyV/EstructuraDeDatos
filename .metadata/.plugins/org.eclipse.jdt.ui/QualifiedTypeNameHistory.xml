@@ -19,9 +19,7 @@
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="MyNodeHT"/>
     <fullyQualifiedTypeName name="MyHashTable"/>
-    <fullyQualifiedTypeName name="java.lang.Comparable"/>
     <fullyQualifiedTypeName name="NodoABB"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="MyHeap"/>
     <fullyQualifiedTypeName name="EjemploIterador"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -43,4 +41,10 @@
     <fullyQualifiedTypeName name="java.util.NoSuchElementException"/>
     <fullyQualifiedTypeName name="MyStack"/>
     <fullyQualifiedTypeName name="MyNodoABB"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="ABBSol202011v"/>
+    <fullyQualifiedTypeName name="ABBAbstract"/>
+    <fullyQualifiedTypeName name="java.sql.Array"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>
