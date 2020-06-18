@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
-    <entry loc="C:\Program Files\Java\jdk-12.0.2" stamp="1569719297040"/>
-    <entry loc="/usr/lib/jvm/java-8-oracle" stamp="1548996240000"/>
-    <entry loc="C:\Program Files\Java\jre1.8.0_201" stamp="1565639003802"/>
-    <entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1580320596599"/>
+<entry loc="C:\Program Files\Java\jdk-12.0.2" stamp="1569719297040"/>
+<entry loc="/usr/lib/jvm/java-8-oracle" stamp="1548996240000"/>
+<entry loc="C:\Program Files\Java\jre1.8.0_201" stamp="1565639003802"/>
+<entry loc="/usr/lib/jvm/java-11-openjdk-amd64" stamp="1580320596599"/>
+<entry loc="C:\Program Files\Java\jre1.8.0_251" stamp="1588353955172"/>
 </dirs>
